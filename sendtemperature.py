@@ -44,14 +44,14 @@ def read_temp():
     return temp_f
 
 # Print out the temperature until the program is stopped.
-while True:
-        g = open("/var/log/temperature/temperature.log", "a")
+#while True:
+g = open("/var/log/temperature/temperature.log", "a")
 #while True:
 #       timenow = datetime.datetime.now()
-        etime = time.time()
+etime = time.time()
 #       print(etime)
-        outputstr = str(etime) + " : " + str(read_temp())
-        g.write(outputstr + "\n")
-        print(outputstr)
-        time.sleep(60)
-        g.close()
+outputstr = str(etime) + " : " + str(read_temp())
+g.write(outputstr + "\n")
+print(outputstr)
+#        time.sleep(60)
+g.close()
